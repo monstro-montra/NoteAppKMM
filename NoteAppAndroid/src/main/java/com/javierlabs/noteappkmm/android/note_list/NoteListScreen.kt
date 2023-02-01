@@ -26,6 +26,7 @@ import androidx.navigation.NavController
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun NoteListScreen(
+    navController: NavController,
     viewModel: NoteListViewModel = hiltViewModel()
 ) {
     val state by viewModel.state.collectAsState()
@@ -36,10 +37,11 @@ fun NoteListScreen(
 
     Scaffold(
         floatingActionButton = {
-            FloatingActionButton( onClick = {
-
-            },
-            backgroundColor = Color.Black
+            FloatingActionButton(
+                onClick = {
+                      navController.navigate("note_detail/-1L")
+                },
+                backgroundColor = Color.Black
             ){
                 Icon(
                     imageVector = Icons.Default.Add,
@@ -92,7 +94,7 @@ fun NoteListScreen(
                             note = note,
                             backgroundColor = Color(note.colorHex),
                             onNoteClick = {
-
+                                navController.navigate("note_detail/${note.id}")
                             },
                             onDeleteClick = {
                                 viewModel.deleteNoteById(note.id!!) //!! = cant be null
@@ -107,9 +109,5 @@ fun NoteListScreen(
 
             }
         }
-
-
-
-
     }
 }

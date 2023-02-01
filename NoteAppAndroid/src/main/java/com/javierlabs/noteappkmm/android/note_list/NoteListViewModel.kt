@@ -38,17 +38,6 @@ class NoteListViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
-            (1..10).forEach {
-                noteDataSource.insertNote(
-                    Note(
-                        id = null,
-                        title = "Note$it",
-                        content = "Content$it",
-                        colorHex = RedOrangeHex,
-                        created = DateTimeUtil.now()
-                    )
-                )
-            }
         }
     }
 
@@ -75,6 +64,4 @@ class NoteListViewModel @Inject constructor(
             loadNotes()
         }
     }
-
-
 }
