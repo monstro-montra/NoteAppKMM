@@ -3,19 +3,13 @@ package com.javierlabs.noteappkmm.android
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.*
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.navigation.NavHost
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.javierlabs.noteappkmm.android.note_list.NoteListScreen
 import com.javierlabs.noteappkmm.android.note_detail.NoteDetailScreen
+import com.javierlabs.noteappkmm.android.note_list.NoteListScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 

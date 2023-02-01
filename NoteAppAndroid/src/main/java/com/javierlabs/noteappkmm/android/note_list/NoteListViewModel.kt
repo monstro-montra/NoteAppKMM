@@ -3,17 +3,14 @@ package com.javierlabs.noteappkmm.android.note_list
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.javierlabs.noteappkmm.app.presentation.RedOrangeHex
 import com.javierlabs.noteappkmm.domain.note.Note
 import com.javierlabs.noteappkmm.domain.note.NoteDataSource
 import com.javierlabs.noteappkmm.domain.note.SearchNotes
-import com.javierlabs.noteappkmm.time.DateTimeUtil
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import java.util.Date
 import javax.inject.Inject
 
 @HiltViewModel
