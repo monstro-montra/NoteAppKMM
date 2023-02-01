@@ -3,14 +3,17 @@ package com.javierlabs.noteappkmm.android.note_list
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.javierlabs.noteappkmm.app.presentation.RedOrangeHex
 import com.javierlabs.noteappkmm.domain.note.Note
 import com.javierlabs.noteappkmm.domain.note.NoteDataSource
 import com.javierlabs.noteappkmm.domain.note.SearchNotes
+import com.javierlabs.noteappkmm.time.DateTimeUtil
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import java.util.Date
 import javax.inject.Inject
 
 @HiltViewModel
@@ -32,6 +35,22 @@ class NoteListViewModel @Inject constructor(
             isSearchActive = isSearchActive
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), NoteListState())
+
+    init {
+        viewModelScope.launch {
+            (1..10).forEach {
+                noteDataSource.insertNote(
+                    Note(
+                        id = null,
+                        title = "Note$it",
+                        content = "Content$it",
+                        colorHex = RedOrangeHex,
+                        created = DateTimeUtil.now()
+                    )
+                )
+            }
+        }
+    }
 
     fun loadNotes(){
         viewModelScope.launch {
