@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		031E135E298B3BF500083127 /* NoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E135D298B3BF500083127 /* NoteItem.swift */; };
 		031E1360298B405900083127 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E135F298B405900083127 /* Colors.swift */; };
+		031E1364298B4BC200083127 /* NoteDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E1363298B4BC200083127 /* NoteDetailScreen.swift */; };
 		03A5EEDD298B2BB5006F47E9 /* NoteListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A5EEDC298B2BB5006F47E9 /* NoteListScreen.swift */; };
 		03A5EEDF298B2BC7006F47E9 /* NoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A5EEDE298B2BC7006F47E9 /* NoteListViewModel.swift */; };
 		03A5EEE1298B338D006F47E9 /*  HideableSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A5EEE0298B338D006F47E9 /*  HideableSearchTextField.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		031E135D298B3BF500083127 /* NoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItem.swift; sourceTree = "<group>"; };
 		031E135F298B405900083127 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		031E1363298B4BC200083127 /* NoteDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailScreen.swift; sourceTree = "<group>"; };
 		03A5EEDC298B2BB5006F47E9 /* NoteListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListScreen.swift; sourceTree = "<group>"; };
 		03A5EEDE298B2BC7006F47E9 /* NoteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewModel.swift; sourceTree = "<group>"; };
 		03A5EEE0298B338D006F47E9 /*  HideableSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " HideableSearchTextField.swift"; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		031E1362298B4B9C00083127 /* note_detail */ = {
+			isa = PBXGroup;
+			children = (
+				031E1363298B4BC200083127 /* NoteDetailScreen.swift */,
+			);
+			path = note_detail;
+			sourceTree = "<group>";
+		};
 		03A5EED9298B2A6F006F47E9 /* note_list */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 		7555FF7D242A565900829871 /* NoteAppIOS */ = {
 			isa = PBXGroup;
 			children = (
+				031E1362298B4B9C00083127 /* note_detail */,
 				03A5EED9298B2A6F006F47E9 /* note_list */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
@@ -207,6 +218,7 @@
 			files = (
 				031E135E298B3BF500083127 /* NoteItem.swift in Sources */,
 				03A5EEDF298B2BC7006F47E9 /* NoteListViewModel.swift in Sources */,
+				031E1364298B4BC200083127 /* NoteDetailScreen.swift in Sources */,
 				03A5EEE1298B338D006F47E9 /*  HideableSearchTextField.swift in Sources */,
 				031E1360298B405900083127 /* Colors.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
@@ -346,6 +358,7 @@
 					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 				);
 				INFOPLIST_FILE = NoteAppIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,6 +387,7 @@
 					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 				);
 				INFOPLIST_FILE = NoteAppIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
