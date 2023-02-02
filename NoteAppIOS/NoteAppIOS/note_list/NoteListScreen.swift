@@ -27,11 +27,13 @@ struct NoteListScreen: View {
                     isActive: $isNoteSelected){
                         EmptyView()
                 }.hidden()
-                HideableSearchTextField<EmptyView>(onSearchToggled: {
+                HideableSearchTextField<NoteDetailScreen>(onSearchToggled: {
                     viewModel.toggleIsSearchActive()
                 },
                 destinationProvider: {
-                    EmptyView()
+                    NoteDetailScreen(
+                    noteDataSource: noteDataSource,
+                    noteId: selectedNoteId)
                 },
                 isSearchActive: viewModel.isSearchActive,
                 searchText: $viewModel.searchText)

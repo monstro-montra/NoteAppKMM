@@ -38,7 +38,7 @@ struct NoteItem: View {
         }
         .padding() //default padding
         .background(Color(hex: note.colorHex))
-        .clipShape(RoundedRectangle(cornerRadius: 5))
+        .clipShape(RoundedRectangle(cornerRadius: 5.0))
     }
 }
 
