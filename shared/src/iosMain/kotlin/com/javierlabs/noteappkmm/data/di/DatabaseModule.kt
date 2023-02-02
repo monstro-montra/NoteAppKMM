@@ -8,7 +8,7 @@ import com.javierlabs.noteappkmm.domain.note.NoteDataSource
 class DatabaseModule {
 
     private val factory by lazy { DatabaseDriverFactory() }
-    private val noteDataSource: NoteDataSource by lazy {
+    val noteDataSource: NoteDataSource by lazy {
         SqlDelightNoteDataSource(NoteDatabase(factory.createDriver()))
     }
 }
