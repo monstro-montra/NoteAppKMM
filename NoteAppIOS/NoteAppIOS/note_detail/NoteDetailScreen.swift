@@ -25,6 +25,6 @@ struct NoteDetailScreen: View {
 
 struct NoteDetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        NoteDetailScreen()
+        EmptyView()
     }
 }
